@@ -1,0 +1,11 @@
+[Plugin]
+Loader = python
+Module = showlyrics
+IAge = 2
+Name = Show Lyrics
+Name[zh_CN] = 显示歌词
+Description = Call osdlyrics to show lyrics
+Description[zh_CN] = 调用osdlyrics以显示歌词
+Authors = liberize <liberize@gmail.com>
+Copyright = Copyright © 2013 liberize
+Website = https://github.com/liberize/rhythmbox-osdlyrics-plugin
