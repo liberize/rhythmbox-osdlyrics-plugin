@@ -2,8 +2,7 @@
 #-*- coding: UTF-8 -*-
 
 import os
-from gi.repository import Gtk, Gdk, GObject, Pango, Peas
-from gi.repository import RB
+from gi.repository import Gtk, GObject, Peas
 from ConfigParser import ConfigParser
 
 ui_str = """
@@ -39,14 +38,14 @@ class ShowLyricsPlugin(GObject.Object, Peas.Activatable):
 		lyrics_on = config.getboolean('Lyrics', 'Show')
 		if lyrics_on:
 			os.system('[ ! -n "`pgrep osdlyrics`" ] && osdlyrics&')
-			label = _("关闭歌词")
+			label = "关闭歌词"
 		else:
-			label = _("显示歌词")
+			label = "显示歌词"
 
 		data['action_group'] = Gtk.ActionGroup(name='ShowLyricsPluginActions')
 		action = Gtk.Action(	name = 'ShowLyrics',
 					label = label,
-		                    	tooltip = _("显示/关闭歌词"),
+		                    	tooltip = "显示/关闭歌词",
 		                    	stock_id = Gtk.STOCK_EDIT
 		                    )
 		action.connect('activate', self.show_lyrics, shell)
@@ -87,11 +86,11 @@ class ShowLyricsPlugin(GObject.Object, Peas.Activatable):
 						
 		if lyrics_on:
 			os.system('[ -n "`pgrep osdlyrics`" ] && killall osdlyrics')
-			action.set_label(_("显示歌词"))
+			action.set_label("显示歌词")
 			lyrics_on = False
 		else:
 			os.system('[ ! -n "`pgrep osdlyrics`" ] && osdlyrics&')
-			action.set_label(_("关闭歌词"))
+			action.set_label("关闭歌词")
 			lyrics_on = True
 		
 		manager = shell.props.ui_manager
