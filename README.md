@@ -7,7 +7,7 @@ It calls osdlyrics to display lyrics, so _osdlyrics is required_.
 
 This plugin will create a toolbar button, like this:
 
-![Toolbar Button](http://liberize.github.io/images/rhythmbox-osdlyrics-plugin.jpg)
+![Toolbar Button](http://liberize.u.qiniudn.com/rhythmbox-osdlyrics-plugin.jpg)
 
 You can toggle lyrics display by clicking it.
 
@@ -30,5 +30,5 @@ _PS: you may want to disable the original lyrics plugin as well._
 ## Contact
 
 * @liberize: <https://github.com/liberize>
-* Blog Page: <http://liberize.github.io/pages/projects/rhythmbox-osdlyrics-plugin.html>
+* Blog Page: <http://liberize.me/>
 * Email: <liberize@gmail.com>
